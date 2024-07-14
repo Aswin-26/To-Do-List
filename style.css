@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+    font-family: "Bona Nova SC", serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right,#333399,#FF00CC);
+    padding: 10px;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: rgba(255, 255, 255, 0.836);
+    margin: 150px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px #91EAE4;
+}
+
+h2{
+    color: #2773c4;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+    position: relative;
+    text-shadow: 0px 1px 3px;
+}
+
+h2 img{
+    width: 40px;
+    position: absolute;
+    right: 0;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: 3px groove #000000c2;
+    outline-offset: 3px;
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px #240750;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: px;
+    padding: 10px;
+}
+
+input::placeholder{
+    color: #2a4857;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 30px;
+    background: #240750;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 3px;
+    transition: transform 0.35s ease;
+}
+
+button:hover{
+    transform: scale(1.10);
+}
+
+ul li{
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin-block: 10px;
+}
+
+ul li::before{
+    content:'';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: url(/images1/unchecked.png);
+    background-size: cover;
+    position: center;
+    top: 8px;
+    left: 8px;
+}
+
+ul li.checked{
+    background: #344C64;
+    color: white;
+    border-radius: 50px;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background: url(images1/checked.png);
+    background-size: cover;
+}
+
+ul li span{
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 22px;
+    color: #000;
+    text-align: center;
+    border-radius: 50%;
+    transition: transform 0.35s ease;
+    transition: color 0.5s ease;
+}
+
+ul li span:hover{
+    background: #000;
+    color: white;
+    transform: scale(1.25);    
+}
+
+ul li.checked span{
+    color: #fff;
+    transition: transform 0.35s ease;
+}
+
+
+ul li.checked span:hover{
+    background: white;
+    color: black;
+    transform: scale(1.25);
+}
